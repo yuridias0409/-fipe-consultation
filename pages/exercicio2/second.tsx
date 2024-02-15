@@ -1,7 +1,11 @@
 import React from 'react';
 
+interface DataObject {
+  [key: string]: any;
+}
+
 const Second = () => {
-  function updateData(objetoPrincipal, novosDados) {
+  function updateData(objetoPrincipal: DataObject, novosDados: Partial<DataObject>) {
     for (let chave in novosDados) {
       if (objetoPrincipal.hasOwnProperty(chave)) {
         objetoPrincipal[chave] = novosDados[chave];
@@ -23,7 +27,7 @@ const Second = () => {
   );
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

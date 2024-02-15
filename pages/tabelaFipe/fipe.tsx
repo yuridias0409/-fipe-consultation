@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const TabelaFipe = () => {
-  const [brandList, setBrandList] = useState([]);
-  const [modelsList, setModelsList] = useState([]);
-  const [yearsList, setYearsList] = useState([]);
+  const [brandList, setBrandList] = useState<any[]>([]);
+  const [modelsList, setModelsList] = useState<any[]>([]);
+  const [yearsList, setYearsList] = useState<any[]>([]);
   const [selectedBrandCode, setSelectedBrandCode] = useState('');
   const [selectedModelCode, setSelectedModelCode] = useState('');
   const [selectedYearCode, setSelectedYearCode] = useState('');
@@ -95,7 +95,7 @@ const TabelaFipe = () => {
   );
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -104,7 +104,7 @@ const containerStyle = {
   minHeight: '55vh',
 };
 
-const formStyle = {
+const formStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

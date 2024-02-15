@@ -30,14 +30,14 @@ const First = () => {
   );
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
 };
 
-const formStyle = {
+const formStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

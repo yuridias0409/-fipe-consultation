@@ -1,5 +1,7 @@
 import React from 'react';
 
+interface DataObject { name: string; gender: any; image: any; species: any; }
+
 const Third = () => {
   const characters = ['Rick Sanchez', 'Morty Smith', 'Summer Smith', 'Beth Smith', 'Jerry Smith'];
 
@@ -12,7 +14,7 @@ const Third = () => {
         return response.json();
       })
       .then(data => {
-        console.log(data.results.map(character => {
+        console.log(data.results.map((character: DataObject) => {
           if(characters.includes(character.name)){
             return {
               nome: character.name,
@@ -22,7 +24,7 @@ const Third = () => {
             }
           };
           return null;
-        }).filter(item => item !== null));
+        }).filter((item: null) => item !== null));
       })
       .catch(error => {
         console.error('Erro ao buscar dados da API:', error);
@@ -39,7 +41,7 @@ const Third = () => {
   );
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

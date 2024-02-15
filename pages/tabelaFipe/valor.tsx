@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const Valor = () => {
   const router = useRouter();
-  const [carData, setCarData] = useState(null);
+  const [carData, setCarData] = useState({Marca: '', Modelo: '', Valor: ''});
 
   useEffect(() => {
     const { marca, modelo, ano } = router.query;
@@ -25,7 +25,7 @@ const Valor = () => {
     }
   }, [router.query]);
 
-  if (!carData) {
+  if (!carData.Marca) {
     return <p>Carregando...</p>;
   }
 
@@ -44,7 +44,7 @@ const Valor = () => {
   );
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -52,7 +52,7 @@ const containerStyle = {
   backgroundColor: '#dcf5f2',
 };
 
-const contentStyle = {
+const contentStyle: React.CSSProperties = {
   textAlign: 'center',
 };
 
