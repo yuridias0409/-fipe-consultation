@@ -8,7 +8,7 @@ const First = () => {
     setInputMasked(inputValue.replace(/.(?=.{4})/g, '#'));
   }
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setInputValue(event.target.value);
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Fourth = () => {
-  function checkIfTheFirstLetterIsUppercase(string) {
+  function checkIfTheFirstLetterIsUppercase(string: string) {
     return string.charAt(0) === string.charAt(0).toUpperCase();
   }
 

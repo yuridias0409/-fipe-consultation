@@ -29,7 +29,7 @@ const TabelaFipe = () => {
       });
   }
 
-  const handleBrandSelected = (brandCode) => {
+  const handleBrandSelected = (brandCode: React.SetStateAction<string>) => {
     setSelectedBrandCode(brandCode);
     fetch(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${brandCode}/modelos`)
       .then(response => {
@@ -47,7 +47,7 @@ const TabelaFipe = () => {
       });
   }
 
-  const handleModelSelected = (modelCode) => {
+  const handleModelSelected = (modelCode: React.SetStateAction<string>) => {
     setSelectedModelCode(modelCode);
     fetch(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${selectedBrandCode}/modelos/${modelCode}/anos`)
       .then(response => {
